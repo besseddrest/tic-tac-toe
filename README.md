@@ -1,2 +1,2 @@
-Tic Tac Toe Board
+# Tic Tac Toe Board
 coded with React.js
