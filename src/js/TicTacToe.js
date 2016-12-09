@@ -187,13 +187,13 @@ var Game = React.createClass({
 
     // completed styling
     if (this.state.completed) {
-      this.gameClasses = 'game table-success';
+      this.gameClasses = 'game game__success';
       this.restartClasses = 'btn btn-sm btn-info glyphicon glyphicon-repeat'
     }
 
     // tie game styling
     if (this.state.tie) {
-      this.gameClasses = 'game table-tied';
+      this.gameClasses = 'game game__tied';
       this.restartClasses = 'btn btn-sm btn-info glyphicon glyphicon-repeat'
     }
 
@@ -201,37 +201,37 @@ var Game = React.createClass({
     // without having to pass it as a property on every component?
     return (
       <div className={this.gameClasses} id={this.props.id}>
-        <div className="table-tictactoe">
-          <ul>
-            <li>
+        <div className="tictactoe">
+          <ul className="tictactoe--row">
+            <li className="tictactoe--cell">
               <Space onClick={this.play.bind(null, 0, 0)} value={this.state.board[0][0]} isCompleted={this.state.completed} />
             </li>
-            <li>
+            <li className="tictactoe--cell">
               <Space onClick={this.play.bind(null, 0, 1)} value={this.state.board[0][1]} isCompleted={this.state.completed} />
             </li>
-            <li>
+            <li className="tictactoe--cell">
               <Space onClick={this.play.bind(null, 0, 2)} value={this.state.board[0][2]} isCompleted={this.state.completed} />
             </li>
           </ul>
-          <ul>
-            <li>
+          <ul className="tictactoe--row">
+            <li className="tictactoe--cell">
               <Space onClick={this.play.bind(null, 1, 0)} value={this.state.board[1][0]} isCompleted={this.state.completed} />
             </li>
-            <li>
+            <li className="tictactoe--cell">
               <Space onClick={this.play.bind(null, 1, 1)} value={this.state.board[1][1]} isCompleted={this.state.completed} />
             </li>
-            <li>
+            <li className="tictactoe--cell">
               <Space onClick={this.play.bind(null, 1, 2)} value={this.state.board[1][2]} isCompleted={this.state.completed} />
             </li>
           </ul>
-          <ul>
-            <li>
+          <ul className="tictactoe--row">
+            <li className="tictactoe--cell">
               <Space onClick={this.play.bind(null, 2, 0)} value={this.state.board[2][0]} isCompleted={this.state.completed} />
             </li>
-            <li>
+            <li className="tictactoe--cell">
               <Space onClick={this.play.bind(null, 2, 1)} value={this.state.board[2][1]} isCompleted={this.state.completed} />
             </li>
-            <li>
+            <li className="tictactoe--cell">
               <Space onClick={this.play.bind(null, 2, 2)} value={this.state.board[2][2]} isCompleted={this.state.completed} />
             </li>
           </ul>
@@ -254,7 +254,7 @@ var Space = React.createClass({
     }
 
     return (
-      <button className="space" onClick={this.props.onClick} disabled={this.disabled}>{this.props.value}</button>
+      <button className="tictactoe--space" onClick={this.props.onClick} disabled={this.disabled}>{this.props.value}</button>
     )
   }
 });

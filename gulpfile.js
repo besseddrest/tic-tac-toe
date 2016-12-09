@@ -5,7 +5,7 @@ var gulp = require('gulp'),
 var sass = require('gulp-sass');
 
 var src = './src',
-    app = './builds/app';
+    app = './build/app';
 
 gulp.task('js', function() {
   return gulp.src( src + '/js/TicTacToe.js' )

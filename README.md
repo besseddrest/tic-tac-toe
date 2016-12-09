@@ -1,4 +1,6 @@
 # Tic Tac Toe Board
-This is a Tic Tac Toe Board, coded in ReactJS. This uses Node & Gulp.
+This is a Tic Tac Toe Board, coded in React.
 
-Click the '+' icon at the bottom right to create a new game.
+The stylesheet is in Sass, using BEM (Block Element Modifier) methodology.
+
+To try this out, clone this repo, run `npm install` and run locally with `gulp`

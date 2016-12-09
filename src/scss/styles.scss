@@ -1,0 +1,84 @@
+$success: lightgreen;
+$dark: black;
+$light: lightgrey;
+$muted: #efefef;
+
+body {
+  background: $light;
+  position: relative;
+}
+
+.glyphicon {
+  top: auto;
+  bottom: 10px;
+  right: 10px;
+}
+
+.glyphicon-repeat {
+  position:absolute;
+}
+
+.glyphicon-plus {
+  position: fixed;
+}
+
+.game {
+  display: inline-block;
+  position:relative;
+  margin: 5px;
+  padding: 20px;
+  background: $muted;
+  width: 160px;
+  height: 160px;
+
+  &__success {
+    background-color: $success;
+
+    /* TODO flatten these, they belong under .tictactoe */
+    .table--row, .table--cell {
+      border-color: $success;
+      color: $success;
+    }
+  }
+
+  &__tied {
+    background-color: orange;
+  }
+}
+
+.tictactoe-grid-bottom {
+  border-bottom:1px solid $dark;
+}
+
+.tictactoe-grid-right {
+  border-right:1px solid $dark;
+}
+
+/* Table */
+.tictactoe {
+  background-color: white;
+
+  &--row, &--cell {
+    margin: 0;
+    padding: 0;
+  }
+
+  &--row {
+    overflow: hidden;
+  }
+
+  &--cell {
+    float: left;
+    width: 40px;
+    height: 40px;
+    list-style: none;
+    border:1px solid $light;
+  }
+
+  &--space {
+    border:0;
+    background:transparent;
+    width:100%;
+    height:100%;
+  }
+}
