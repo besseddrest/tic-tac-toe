@@ -11,3 +11,4 @@ TODO:
 * include jQuery scripts with browserify
 * convert fully to BEM
 * implement/fix draggable on `componentDidMount` for `Game` Component
+* remove unnecessary gulp plugins
