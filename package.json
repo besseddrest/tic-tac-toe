@@ -1,0 +1,39 @@
+{
+  "name": "tic-tac-toe",
+  "version": "1.0.0",
+  "description": "A Tic Tac Toe Board exercise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/besseddrest/tic-tac-toe.git"
+  },
+  "keywords": [
+    "tic-tac-toe",
+    "react",
+    "javascript"
+  ],
+  "author": "Harold Cabalic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/besseddrest/tic-tac-toe/issues"
+  },
+  "homepage": "https://github.com/besseddrest/tic-tac-toe#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-react": "^3.1.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-webserver": "^0.9.1",
+    "jshint-stylish": "^2.2.1",
+    "lodash": "^4.17.2",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "reactify": "^1.1.1"
+  },
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}

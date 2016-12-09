@@ -4,10 +4,14 @@ body {
 }
 
 .game {
-  display:inline-block;
+  margin: 0 auto;
+  display:block;
   margin: 5px;
   padding:20px;
   background: #efefef;
+  width: 160px;
+  height: 160px;
+  position: absolute;
 }
 
 .glyphicon {
@@ -52,6 +56,19 @@ body {
 
 .tictactoe-grid-right {
   border-right:1px solid black;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  list-style: none;
+  border:1px solid lightgrey;
 }
 
 .space {

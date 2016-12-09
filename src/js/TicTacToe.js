@@ -1,3 +1,6 @@
+var React = require('react');
+var ReactDOM = require('react-dom');
+
 var TicTacToeBoard = React.createClass({
   getInitialState: function() {
     return {
@@ -61,7 +64,7 @@ var Game = React.createClass({
 
   componentDidMount: function(){
     // make game draggable (by outer edges)
-    $(this.getDOMNode()).draggable();
+    // $(this.getDOMNode()).draggable();
   },
 
   play: function(x, y) {
@@ -93,7 +96,7 @@ var Game = React.createClass({
       this._displayTie();
       return;
     }
-    
+
     // no winner yet, other player's turn
     this._swapPlayer();
     this.moves++;
@@ -198,41 +201,41 @@ var Game = React.createClass({
     // without having to pass it as a property on every component?
     return (
       <div className={this.gameClasses} id={this.props.id}>
-        <table className="table-tictactoe">
-          <tr className="tictactoe-grid-bottom">
-            <td className="tictactoe-grid-right">
+        <div className="table-tictactoe">
+          <ul>
+            <li>
               <Space onClick={this.play.bind(null, 0, 0)} value={this.state.board[0][0]} isCompleted={this.state.completed} />
-            </td>
-            <td className="tictactoe-grid-right">
+            </li>
+            <li>
               <Space onClick={this.play.bind(null, 0, 1)} value={this.state.board[0][1]} isCompleted={this.state.completed} />
-            </td>
-            <td>
+            </li>
+            <li>
               <Space onClick={this.play.bind(null, 0, 2)} value={this.state.board[0][2]} isCompleted={this.state.completed} />
-            </td>
-          </tr>
-          <tr className="tictactoe-grid-bottom">
-            <td className="tictactoe-grid-right">
+            </li>
+          </ul>
+          <ul>
+            <li>
               <Space onClick={this.play.bind(null, 1, 0)} value={this.state.board[1][0]} isCompleted={this.state.completed} />
-            </td>
-            <td className="tictactoe-grid-right">
+            </li>
+            <li>
               <Space onClick={this.play.bind(null, 1, 1)} value={this.state.board[1][1]} isCompleted={this.state.completed} />
-            </td>
-            <td>
+            </li>
+            <li>
               <Space onClick={this.play.bind(null, 1, 2)} value={this.state.board[1][2]} isCompleted={this.state.completed} />
-            </td>
-          </tr>
-          <tr>
-            <td className="tictactoe-grid-right">
+            </li>
+          </ul>
+          <ul>
+            <li>
               <Space onClick={this.play.bind(null, 2, 0)} value={this.state.board[2][0]} isCompleted={this.state.completed} />
-            </td>
-            <td className="tictactoe-grid-right">
+            </li>
+            <li>
               <Space onClick={this.play.bind(null, 2, 1)} value={this.state.board[2][1]} isCompleted={this.state.completed} />
-            </td>
-            <td>
+            </li>
+            <li>
               <Space onClick={this.play.bind(null, 2, 2)} value={this.state.board[2][2]} isCompleted={this.state.completed} />
-            </td>
-          </tr>
-        </table>
+            </li>
+          </ul>
+        </div>
         <button onClick={this.restart} className={this.restartClasses} />
       </div>
     )
@@ -256,4 +259,4 @@ var Space = React.createClass({
   }
 });
 
-React.render(<TicTacToeBoard/>, document.getElementById('react-container'));
+ReactDOM.render(<TicTacToeBoard/>, document.getElementById('react-container'));
