@@ -41,7 +41,7 @@ var TicTacToeBoard = React.createClass({
         <h1>{this.state.headline}</h1>
         <p>{this.state.subheader}</p>
         {this.state.games.map(this.eachGame)}
-        <button id="btn-add" className="btn btn-sm btn-success glyphicon glyphicon-plus" onClick={this.add} />
+        <button id="btn-add" className="btn btn-sm btn-success" onClick={this.add}>Add Game</button>
       </div>
     )
   }
@@ -188,13 +188,13 @@ var Game = React.createClass({
     // completed styling
     if (this.state.completed) {
       this.gameClasses = 'game game__success';
-      this.restartClasses = 'btn btn-sm btn-info glyphicon glyphicon-repeat'
+      this.restartClasses = 'btn btn-sm btn-info'
     }
 
     // tie game styling
     if (this.state.tie) {
       this.gameClasses = 'game game__tied';
-      this.restartClasses = 'btn btn-sm btn-info glyphicon glyphicon-repeat'
+      this.restartClasses = 'btn btn-sm btn-info'
     }
 
     // is it possible to send this.state.completed to the Space child
@@ -236,7 +236,7 @@ var Game = React.createClass({
             </li>
           </ul>
         </div>
-        <button onClick={this.restart} className={this.restartClasses} />
+        <button onClick={this.restart} className={this.restartClasses}>&#8634;</button>
       </div>
     )
   }
