@@ -1,5 +1,5 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+var React = require('react'),
+    ReactDOM = require('react-dom');
 
 var TicTacToeBoard = React.createClass({
   getInitialState: function() {
@@ -110,7 +110,6 @@ var Game = React.createClass({
       this.setState({currentPlayer: 'X'});
     }
   },
-
 
   _checkRow: function(x) {
     var board = this.state.board;

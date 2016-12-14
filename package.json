@@ -28,14 +28,14 @@
     "gulp-sass": "^2.3.2",
     "gulp-webserver": "^0.9.1",
     "jshint-stylish": "^2.2.1",
-    "lodash": "^4.17.2",
-    "react": "^15.4.1",
-    "react-dom": "^15.4.1",
-    "reactify": "^1.1.1",
     "wiredep": "^4.0.0"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "bootstrap-sass": "^3.3.7"
+    "bootstrap-sass": "^3.3.7",
+    "lodash": "^4.17.2",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "reactify": "^1.1.1"
   }
 }
